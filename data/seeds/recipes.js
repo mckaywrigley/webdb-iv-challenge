@@ -5,13 +5,26 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       // Inserts seed entries
       return knex("recipes").insert([
-        { ingredient_name: "Flour" },
-        { ingredient_name: "Sugar" },
-        { ingredient_name: "Salt" },
-        { ingredient_name: "Tomato Sauce" },
-        { ingredient_name: "Taco Shells" },
-        { ingredient_name: "Ground Beef" },
-        { ingredient_name: "Lettuce" }
+        {
+          recipe_name: "Ordered Pizza",
+          instructions: "Just order pizza",
+          dish_id: "1"
+        },
+        {
+          recipe_name: "Homemade Pizza",
+          instructions: "Just order pizza",
+          dish_id: "1"
+        },
+        {
+          recipe_name: "Street Tacos",
+          instructions: "Small corn torilla and carne asada.",
+          dish_id: "2"
+        },
+        {
+          recipe_name: "Cobb Salad",
+          instructions: "Lettuce, egg, bacon, blue cheese.",
+          dish_id: "3"
+        }
       ]);
     });
 };
